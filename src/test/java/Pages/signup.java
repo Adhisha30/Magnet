@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,7 +29,7 @@ public class signup {
 
 	@Given("Open the browser")
 	public void open_the_browser() {
-	    wd = new EdgeDriver();
+	    wd = new ChromeDriver();
 	    wd.manage().window().maximize();
 	    wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	    wd.get("https://magento.softwaretestingboard.com/customer/account/create/");

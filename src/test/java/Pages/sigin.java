@@ -29,7 +29,7 @@ public class sigin {
 	@Given("Open the link")
     public void open_the_link() {
       
-		driver = new EdgeDriver();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("https://magento.softwaretestingboard.com/");
